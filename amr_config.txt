@@ -1,0 +1,11 @@
+1. wheel speparate = 0.453 [m]
+2. Wheel Diameter = 0.2 [m]
+3. Height = 0.247 [m]
+4. AMR Dimension = 0.63x1.03x0.247 [m]
+
+5. Robot weight = 172.6 [kg]
+6. Payload = 100 [kg]
+
+7. Robot linear speed = 1.5 [m/s]
+8. Motor Torque = 24.17 [N-m]
+9. Motor Speed = 15 [rad/s]

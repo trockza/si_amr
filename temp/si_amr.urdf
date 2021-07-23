@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="si_amr">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0111687679342633 7.60706926982341E-06 -0.0775923849011201"
+        rpy="0 0 0" />
+      <mass
+        value="44.8359750988227" />
+      <inertia
+        ixx="0.86786450117829"
+        ixy="-1.30900344543922E-05"
+        ixz="0.00428359302486942"
+        iyy="2.10439013034758"
+        iyz="5.61997396601663E-08"
+        izz="2.88226358947726" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_left_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="4.13932148724235" />
+      <inertia
+        ixx="0.0111018499195447"
+        ixy="-1.14794264253731E-18"
+        ixz="1.39715517819818E-19"
+        iyy="0.0111018499195447"
+        iyz="-1.25817765026692E-19"
+        izz="0.0205234809346338" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/wheel_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/wheel_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.226499999999998 -0.147000000000001"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_left_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="20"
+      velocity="15" />
+  </joint>
+  <link
+    name="wheel_right_link">
+    <inertial>
+      <origin
+        xyz="0 1.38777878078145E-17 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="4.13932148724235" />
+      <inertia
+        ixx="0.0111018499195447"
+        ixy="8.4551469844733E-39"
+        ixz="6.29031827652372E-35"
+        iyy="0.0111018499195447"
+        iyz="1.50702389241546E-35"
+        izz="0.0205234809346339" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/wheel_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/wheel_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.226500000000003 -0.146999999999999"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_right_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="20"
+      velocity="15" />
+  </joint>
+  <link
+    name="caster_front_link">
+    <inertial>
+      <origin
+        xyz="0.00133574187463248 -5.71868151332457E-05 -0.0201334264021582"
+        rpy="0 0 0" />
+      <mass
+        value="0.0273136144310984" />
+      <inertia
+        ixx="2.00084306350161E-05"
+        ixy="3.26587017739956E-08"
+        ixz="2.99150724390533E-06"
+        iyy="1.56757776722852E-05"
+        iyz="-3.85589452921517E-08"
+        izz="1.94189801360994E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/caster_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/caster_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_front_joint"
+    type="continuous">
+    <origin
+      xyz="0.385000133263433 0 -0.177599999999994"
+      rpy="0 0 -0.00278958211828869" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_front_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_wheel_front_link">
+    <inertial>
+      <origin
+        xyz="4.85537277605808E-08 2.54449933345668E-12 5.58759442833082E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0736834010560839" />
+      <inertia
+        ixx="2.00646646172897E-05"
+        ixy="-1.29307398981512E-14"
+        ixz="-1.08025208363595E-14"
+        iyy="2.00652243842728E-05"
+        iyz="-3.35844640579813E-11"
+        izz="2.22295932374571E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/caster_wheel_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/caster_wheel_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_front_joint"
+    type="continuous">
+    <origin
+      xyz="0.0219998659429772 0 -0.0444"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="caster_front_link" />
+    <child
+      link="caster_wheel_front_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster_rear_link">
+    <inertial>
+      <origin
+        xyz="0.00133587852979922 -5.74648971324989E-05 -0.0297334226003987"
+        rpy="0 0 0" />
+      <mass
+        value="0.0273136131661917" />
+      <inertia
+        ixx="2.0008429931033E-05"
+        ixy="3.26588855034143E-08"
+        ixz="2.99150809122053E-06"
+        iyy="1.56757781442716E-05"
+        iyz="-3.85600353091963E-08"
+        izz="1.94189798763561E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/caster_rear_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/caster_rear_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_rear_joint"
+    type="continuous">
+    <origin
+      xyz="-0.384999999999984 0 -0.168000000000006"
+      rpy="0 0 -3.13959950785527" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_rear_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_wheel_rear_link">
+    <inertial>
+      <origin
+        xyz="-4.85206940181726E-08 -5.24650808908511E-12 -5.58763183033305E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.073683401056083" />
+      <inertia
+        ixx="2.00646646932646E-05"
+        ixy="-1.10696244974163E-14"
+        ixz="5.81129557001231E-15"
+        iyy="2.00652244039019E-05"
+        iyz="3.35844642074516E-11"
+        izz="2.22295933330647E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/caster_wheel_rear_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/caster_wheel_rear_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_rear_joint"
+    type="continuous">
+    <origin
+      xyz="0.0220000000000001 0 -0.054"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="caster_rear_link" />
+    <child
+      link="caster_wheel_rear_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="lidar_front_link">
+    <inertial>
+      <origin
+        xyz="-0.00413330470567919 -3.38572365146672E-06 -0.049539503720096"
+        rpy="0 0 0" />
+      <mass
+        value="1.18107799883357" />
+      <inertia
+        ixx="0.00287968383266064"
+        ixy="-1.58449446736441E-07"
+        ixz="-9.40589036999589E-05"
+        iyy="0.00289536531718506"
+        iyz="-4.21619248552536E-07"
+        izz="0.00159473343043181" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/lidar_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.274509803921569 0.274509803921569 0.274509803921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/lidar_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_front_joint"
+    type="fixed">
+    <origin
+      xyz="0.455070962777734 0.254967917599314 -0.1716637394882"
+      rpy="3.14159265358978 0 0.78522847015574" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_front_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_rear_link">
+    <inertial>
+      <origin
+        xyz="-0.00413330468861456 -3.38570553998219E-06 -0.0495395036964692"
+        rpy="0 0 0" />
+      <mass
+        value="1.18107799827523" />
+      <inertia
+        ixx="0.00287968383028622"
+        ixy="-1.5844861939499E-07"
+        ixz="-9.40589026158793E-05"
+        iyy="0.00289536531490129"
+        iyz="-4.21618103389931E-07"
+        izz="0.0015947334287748" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/lidar_rear_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.274509803921569 0.274509803921569 0.274509803921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/lidar_rear_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_rear_joint"
+    type="fixed">
+    <origin
+      xyz="-0.455070962777702 -0.254967917599318 -0.171663739488213"
+      rpy="-3.14159265358978 0 -2.35636418343405" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_rear_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_front_link">
+    <inertial>
+      <origin
+        xyz="-0.012736 -3.7259E-07 -4.8197E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.048174" />
+      <inertia
+        ixx="2.7391E-05"
+        ixy="-4.2569E-07"
+        ixz="7.5512E-09"
+        iyy="3.3488E-06"
+        iyz="2.1164E-09"
+        izz="2.665E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/camera_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://si_amr/meshes/camera_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_front_joint"
+    type="fixed">
+    <origin
+      xyz="0.5119 2.0065E-05 -0.1325"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_front_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+      <!-- Plugin update rate in Hz -->
+      <updateRate>10</updateRate>
+
+      <!-- Name of left joint, defaults to `left_joint` -->
+      <leftJoint>wheel_left_joint</leftJoint>
+
+      <!-- Name of right joint, defaults to `right_joint` -->
+      <rightJoint>wheel_right_joint</rightJoint>
+
+      <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
+      <wheelSeparation>0.453</wheelSeparation>
+
+      <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
+      <wheelDiameter>0.2</wheelDiameter>
+
+      <!-- Wheel acceleration, in rad/s^2, defaults to 0.0 rad/s^2 -->
+      <wheelAcceleration>1.0</wheelAcceleration>
+
+      <!-- Maximum torque which the wheels can produce, in Nm, defaults to 5 Nm -->
+      <wheelTorque>24.17</wheelTorque>
+
+      <!-- Topic to receive geometry_msgs/Twist message commands, defaults to `cmd_vel` -->
+      <commandTopic>cmd_vel</commandTopic>
+
+      <!-- Topic to publish nav_msgs/Odometry messages, defaults to `odom` -->
+      <odometryTopic>odom</odometryTopic>
+
+      <!-- Odometry frame, defaults to `odom` -->
+      <odometryFrame>odom</odometryFrame>
+
+      <!-- Robot frame to calculate odometry from, defaults to `base_footprint` -->
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+
+      <!-- Odometry source, 0 for ENCODER, 1 for WORLD, defaults to WORLD -->
+      <odometrySource>world</odometrySource>
+
+      <!-- Set to true to publish transforms for the wheel links, defaults to false -->
+      <publishWheelTF>true</publishWheelTF>
+
+      <!-- Set to true to publish transforms for the odometry, defaults to true -->
+      <publishOdom>true</publishOdom>
+
+      <!-- Set to true to publish sensor_msgs/JointState on /joint_states for the wheel joints, defaults to false -->
+      <publishWheelJointState>true</publishWheelJointState>
+
+      <!-- Set to true to swap right and left wheels, defaults to true -->
+      <legacyMode>false</legacyMode>
+    </plugin>
+  </gazebo>
+
+</robot>

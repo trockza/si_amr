@@ -1,0 +1,5 @@
+<launch>
+    <!-- Map server -->
+    <arg name="map_file" default="$(find si_amr)/maps/si_amr_factory.yaml" />
+    <node pkg="map_server" name="trock_map_server" type="map_server" args="$(arg map_file)" />
+</launch>

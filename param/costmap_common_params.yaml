@@ -1,0 +1,24 @@
+# "obstacle range", it will put
+# the obstacle in the costmap
+obstacle_range: 15.0
+
+# LiDAR spec.
+raytrace_range: 20.0
+
+# "footprint"
+footprint: [[0.51,0.31],[0.51,-0.31],[-0.51,-0.31],[-0.51,0.31]]
+
+# Set this factor to be bigger than robot radius
+inflation_radius: 1.0
+
+# Set this factor to be smaller in order to far from obstacles
+cost_scaling_factor: 0.5
+
+map_type: costmap
+
+# second
+transform_tolerance: 0.2
+
+observation_sources: scan
+
+scan: {data_type: LaserScan, topic: scan, marking: true, clearing: true}
